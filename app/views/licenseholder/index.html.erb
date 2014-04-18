@@ -1,0 +1,24 @@
+<fieldset>
+    <h1>license holders</h1>
+   <br/>
+ <center>
+    <table border="2" style="border-color:black;">
+      <tr>
+        <th>First Name </th>
+        <th>Last Name </th>
+        <th>Address </th>
+        <th>Score </th>
+      </tr>
+
+      <% @testers.each do |tester| %>
+          <tr align="center">
+            <td><%= tester.Firstname %> </td>
+            <td><%= tester.Lastname %> </td>
+            <td><%= tester.Address %> </td>
+            <td><%= tester.score %></td>
+          </tr>
+
+      <% end %>
+    </table>
+  </center>
+ </fieldset>

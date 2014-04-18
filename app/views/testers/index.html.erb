@@ -1,0 +1,29 @@
+<h1>Listing testers</h1>
+
+<table>
+  <tr>
+    <th>Firstname</th>
+    <th>Lastname</th>
+    <th>Address</th>
+    <th>Score</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @testers.each do |tester| %>
+  <tr>
+    <td><%= tester.Firstname %></td>
+    <td><%= tester.Lastname %></td>
+    <td><%= tester.Address %></td>
+    <td><%= tester.score %></td>
+    <td><%= link_to 'Show', tester %></td>
+    <td><%= link_to 'Edit', edit_tester_path(tester) %></td>
+    <td><%= link_to 'Destroy', tester, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Tester', new_tester_path %>
